@@ -96,4 +96,32 @@ describe 'Methods' do
 
   end
 
+  describe 'two_as_one?' do
+
+    it 'is true when a and b add to c' do
+      two_as_one?(3, 5, 8).must_equal(true)
+    end
+
+    it 'is true when b and c add to a' do
+      two_as_one?(13, 6, 7).must_equal(true)
+    end
+
+    it 'is true when a and c add to b' do
+      two_as_one?(24, 49, 25).must_equal(true)
+    end
+
+    it 'is false when two do not add to the third' do
+      two_as_one?(90, 60, 100).must_equal(false)
+    end
+
+    it 'is false when all the same number' do
+      two_as_one?(1, 1, 1,).must_equal(false)
+    end
+
+    it 'is true when all 0' do
+      two_as_one?(0, 0, 0).must_equal(true)
+    end
+
+  end
+
 end
