@@ -124,4 +124,26 @@ describe 'Methods' do
 
   end
 
+  describe 'pig_latinify' do
+
+    it 'moves the consonant to the end and adds ay if starts with a consonant' do
+      pig_latinify("truck").must_equal("rucktay")
+    end
+
+    it 'add way if starts with a vowel' do
+      pig_latinify("apple").must_equal("appleway")
+    end
+
+    it "changes to lowercase" do
+      pig_latinify("aPPlE").must_equal("appleway")
+      pig_latinify("TruCK").must_equal("rucktay")
+    end
+
+    it 'removes spaces around input' do
+      pig_latinify("apple ").must_equal("appleway")
+      pig_latinify(" truck").must_equal("rucktay")
+    end
+
+  end
+
 end
