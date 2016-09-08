@@ -52,3 +52,17 @@ def two_as_one?(a, b, c)
 end
 
 # TODO - write pig_latinify
+
+def pig_latinify(str)
+	str = str.lstrip
+	str = str.rstrip
+	str = str.downcase
+	if str[0] == "a" || str[0] == "e" || str[0] == "i" ||str[0] == "o" || str[0] == "u"
+		return(str + "way")
+	else
+		consonant = str[0]
+		str.slice!(0)
+		return(str + consonant + "ay")
+	end
+
+end
