@@ -70,4 +70,30 @@ describe 'Methods' do
 
   end
 
+  describe 'closer_to' do
+
+    it 'returns the first guess if it is closest' do
+      closer_to(50, 49, 30).must_equal(49)
+    end
+
+    it 'returns the second guess if it is closest' do
+      closer_to(50, 53, 78).must_equal(53)
+    end
+
+    it 'returns the correct guess if the guesses are over target' do
+      closer_to(2, 50, 49).must_equal(49)
+      closer_to(2, 100, 101).must_equal(100)
+    end
+
+    it 'returns the correct guess if the guesses are under target' do
+      closer_to(100, 60, 70).must_equal(70)
+      closer_to(2100, 40, 20).must_equal(40)
+    end
+
+    it 'returns 0 if they are the same distance' do
+      closer_to(50, 40, 60).must_equal(0)
+    end
+
+  end
+
 end
