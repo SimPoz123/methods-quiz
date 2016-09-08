@@ -47,4 +47,27 @@ describe 'Methods' do
 
   end
 
+  describe 'icy_hot?' do
+
+    it 'is true when one is icy and the other is hot' do
+      icy_hot?(-20, 115).must_equal(true)
+      icy_hot?(125, -40).must_equal(true)
+    end
+
+    it 'is false when one is icy' do
+      icy_hot?(-50, 40).must_equal(false)
+      icy_hot(60, -25).must_equal(false)
+    end
+
+    it 'is false when one is hot' do
+      icy_hot?(115, 20).must_equal(false)
+      icy_hot?(75, 130).must_equal(false)
+    end
+
+    it 'is false when neither is icy nor hot' do
+      icy_hot?(3, 70).must_equal(false)
+    end
+
+  end
+
 end
