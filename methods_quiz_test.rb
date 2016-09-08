@@ -56,7 +56,7 @@ describe 'Methods' do
 
     it 'is false when one is icy' do
       icy_hot?(-50, 40).must_equal(false)
-      icy_hot(60, -25).must_equal(false)
+      icy_hot?(60, -25).must_equal(false)
     end
 
     it 'is false when one is hot' do

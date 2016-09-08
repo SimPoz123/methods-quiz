@@ -17,6 +17,10 @@ end
 
 # TODO - write icy_hot?
 
+def icy_hot?(a, b)
+	return (a < 0 && b > 100) || (a > 100 && b < 0)
+end
+
 # TODO - write closer_to
 
 # TODO - write two_as_one?
