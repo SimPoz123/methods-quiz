@@ -47,4 +47,8 @@ end
 
 # TODO - write two_as_one?
 
+def two_as_one?(a, b, c)
+	return a + b == c || b + c == a || a + c == b
+end
+
 # TODO - write pig_latinify
