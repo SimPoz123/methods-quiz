@@ -23,6 +23,28 @@ end
 
 # TODO - write closer_to
 
+def closer_to(target, a, b)
+	aDistance = target - a
+	bDistance = target - b
+
+	if aDistance < 0
+		aDistance = aDistance * -1
+	end
+
+	if bDistance < 0
+		bDistance = bDistance * -1
+	end
+
+	if aDistance < bDistance
+		return(a)
+	elsif aDistance > bDistance
+		return(b)
+	elsif aDistance == bDistance
+		return(0)
+	end
+
+end
+
 # TODO - write two_as_one?
 
 # TODO - write pig_latinify
