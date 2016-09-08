@@ -35,4 +35,16 @@ describe 'Methods' do
 
   end
 
+  describe 'not_string' do
+
+    it 'returns string with not unchanged' do
+      not_string("not cool").must_equal("not cool")
+    end
+
+    it 'returns string without not with a not' do
+      not_string("cool").must_equal("not cool")
+    end
+
+  end
+
 end
