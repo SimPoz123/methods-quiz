@@ -42,7 +42,7 @@ describe 'Methods' do
     end
 
     it 'returns string without not with a not' do
-      not_string("cool").must_equal("not cool")
+      not_string("cool").must_equal("notcool")
     end
 
   end
