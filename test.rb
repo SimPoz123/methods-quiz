@@ -6,23 +6,23 @@ describe 'MethodsQuiz' do
 	describe 'HasTeen' do
 
 		it 'no teens should be false' do
-			has_teen(11, 20, 12).must_equal(false)
+			has_teen?(11, 20, 12).must_equal(false)
 		end
 
 		it 'one teen should be true' do
-			has_teen(19, 1, 4).must_equal(true)
-			has_teen(9, 14, 4).must_equal(true)
-			has_teen(9, 1, 13).must_equal(true)
+			has_teen?(19, 1, 4).must_equal(true)
+			has_teen?(9, 14, 4).must_equal(true)
+			has_teen?(9, 1, 13).must_equal(true)
 		end
 
 		it 'two teens should be true' do
-			has_teen(19, 13, 4).must_equal(true)
-			has_teen(9, 16, 13).must_equal(true)
-			has_teen(19, 1, 18).must_equal(true)
+			has_teen?(19, 13, 4).must_equal(true)
+			has_teen?(9, 16, 13).must_equal(true)
+			has_teen?(19, 1, 18).must_equal(true)
 		end
 
 		it 'all teens should be true' do
-			has_teen(19, 13, 14).must_equal(true)
+			has_teen?(19, 13, 14).must_equal(true)
 		end
 
 	end
@@ -46,31 +46,31 @@ describe 'MethodsQuiz' do
 	describe 'IcyHot' do
 
 		it 'both icy should be false' do
-			icy_hot(-1, -2).must_equal(false)
+			icy_hot?(-1, -2).must_equal(false)
 		end
 
 		it 'both hot should be false' do
-			icy_hot(101, 110).must_equal(false)
+			icy_hot?(101, 110).must_equal(false)
 		end
 
 		it 'icy and hot should be true' do
-			icy_hot(-1, 104).must_equal(true)
+			icy_hot?(-1, 104).must_equal(true)
 		end
 
 		it 'hot and icy should be true' do
-			icy_hot(101, -4).must_equal(true)
+			icy_hot?(101, -4).must_equal(true)
 		end
 
 		it 'icy and middle should be false' do
-			icy_hot(-1, 0).must_equal(false)
+			icy_hot?(-1, 0).must_equal(false)
 		end
 
 		it 'hot and middle should be false' do
-			icy_hot(101, 100).must_equal(false)
+			icy_hot?(101, 100).must_equal(false)
 		end
 
 		it 'both middle should be false' do
-			icy_hot(0, 100).must_equal(false)
+			icy_hot?(0, 100).must_equal(false)
 		end
 
 	end
@@ -99,23 +99,23 @@ describe 'MethodsQuiz' do
 	describe 'TwoAsOne' do
 
 		it 'a + b equals c is true' do
-			two_as_one(1, 2, 3).must_equal(true)
+			two_as_one?(1, 2, 3).must_equal(true)
 		end
 
 		it 'b + c equals a is true' do
-			two_as_one(5, 2, 3).must_equal(true)
+			two_as_one?(5, 2, 3).must_equal(true)
 		end
 
 		it 'a + c equals b is true' do
-			two_as_one(1, 4, 3).must_equal(true)
+			two_as_one?(1, 4, 3).must_equal(true)
 		end
 
 		it 'no sum pairs are equal is false' do
-			two_as_one(1, 2, 4).must_equal(false)
+			two_as_one?(1, 2, 4).must_equal(false)
 		end
 
 		it 'same numbers should be false' do
-			two_as_one(1, 1, 1).must_equal(false)
+			two_as_one?(1, 1, 1).must_equal(false)
 		end
 
 	end
