@@ -66,3 +66,22 @@ def pig_latinify(str)
 	end
 
 end
+
+def pig_latinify_sentence(str)
+	str = str.lstrip
+	str = str.rstrip
+	str = str.downcase
+	str = str.split
+	if str[0] == "a" || str[0] == "e" || str[0] == "i" ||str[0] == "o" || str[0] == "u"
+		return(str + "way")
+	elsif str[0..1] == "ch" || str[0..1] == "sh" || str[0..1] == "ph" || str[0..1] == "th" ||
+		consonant = str[0..1]
+		str.slice(0..1)
+		return(str + consonant + "ay")
+	else
+		consonant = str[0]
+		str.slice!(0)
+		return(str + consonant + "ay")
+	end
+
+end

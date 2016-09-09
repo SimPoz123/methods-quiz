@@ -146,4 +146,12 @@ describe 'Methods' do
 
   end
 
+  describe 'pig_latinify_sentence' do
+
+    it 'works with sentences' do
+      pig_latinify_sentence("the dog kicks the apple").must_equal("ethay ogday ickskay ethay appleway")
+    end
+
+  end
+
 end
