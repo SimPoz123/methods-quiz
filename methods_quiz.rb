@@ -67,21 +67,71 @@ def pig_latinify(str)
 
 end
 
-def pig_latinify_sentence(str)
+# def pig_latinify_sentence(str)
+# 	str = str.lstrip
+# 	str = str.rstrip
+# 	str = str.downcase
+# 	str = str.split
+# 	if str[0] == "a" || str[0] == "e" || str[0] == "i" ||str[0] == "o" || str[0] == "u"
+# 		return(str + "way")
+# 	elsif str[0..1] == "ch" || str[0..1] == "sh" || str[0..1] == "ph" || str[0..1] == "th" ||
+# 		consonant = str[0..1]
+# 		str.slice(0..1)
+# 		return(str + consonant + "ay")
+# 	else
+# 		consonant = str[0]
+# 		str.slice!(0)
+# 		return(str + consonant + "ay")
+# 	end
+
+end
+
+def tutnese(str)
 	str = str.lstrip
 	str = str.rstrip
 	str = str.downcase
-	str = str.split
-	if str[0] == "a" || str[0] == "e" || str[0] == "i" ||str[0] == "o" || str[0] == "u"
-		return(str + "way")
-	elsif str[0..1] == "ch" || str[0..1] == "sh" || str[0..1] == "ph" || str[0..1] == "th" ||
-		consonant = str[0..1]
-		str.slice(0..1)
-		return(str + consonant + "ay")
-	else
-		consonant = str[0]
-		str.slice!(0)
-		return(str + consonant + "ay")
-	end
-
+	str = str.split(//)
+	str.map!(&:.to_s)
+	if str == "b"
+		str = "bub"
+	elsif str == "c"
+		str = "cash"
+	elsif str == "d"
+		str = "dud"
+	elsif str == "f"
+		str = "fud"
+	elsif str == "g"
+		str = "gug"
+	elsif str == "h"
+		str = "hash"
+	elsif str == "j"
+		str = "jug"
+	elsif str == "k"
+		str = "kuck"
+	elsif str == "l"
+		str = "lul"
+	elsif str == "m"
+		str = "mum"
+	elsif str == "n"
+		str = "nun"
+	elsif str == "p"
+		str = "pup"
+	elsif str == "q"
+		str = "quack"
+	elsif str == "r"
+		str = "rug"
+	elsif str == "s"
+		str = "sus"
+	elsif str == "t"
+		str = "tut"
+	elsif str == "v"
+		str = "vuv"
+	elsif str == "w"
+		str = "wack"
+	elsif str == "x"
+		str = "ex"
+	elsif str == "y"
+		str = "yub"
+	elsif str == "z"
+		str = "zug"
 end

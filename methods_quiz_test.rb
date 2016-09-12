@@ -146,10 +146,26 @@ describe 'Methods' do
 
   end
 
-  describe 'pig_latinify_sentence' do
+  # describe 'pig_latinify_sentence' do
+  #
+  #   it 'works with sentences' do
+  #     pig_latinify_sentence("the dog kicks the apple").must_equal("ethay ogday ickskay ethay appleway")
+  #   end
+  #
+  # end
 
-    it 'works with sentences' do
-      pig_latinify_sentence("the dog kicks the apple").must_equal("ethay ogday ickskay ethay appleway")
+  describe 'tutnese' do
+
+    it 'translates words' do
+      tutnese("dog").must_equal("dudogug")
+    end
+
+    it 'translates words with double consonant' do
+      tutnese("little").must_equal("lulisquatutlule")
+    end
+
+    it 'translates word with double vowel' do
+      tutnese("tree").must_equal("tutrugsquate")
     end
 
   end
